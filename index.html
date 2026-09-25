@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Chessy.Ai</title>
+    <link rel="stylesheet" href="/src/style.css" />
+  </head>
+  <body>
+    <main class="app">
+      <section class="board-wrap">
+        <div id="status" class="status" aria-live="polite"></div>
+        <div id="board" class="board" role="grid" aria-label="Chess board"></div>
+      </section>
+      <aside class="panel">
+        <h1>Chessy.Ai</h1>
+        <div class="controls">
+          <button id="new-game">New game</button>
+          <button id="undo">Undo</button>
+          <button id="flip">Flip board</button>
+        </div>
+        <label class="toggle">
+          <input type="checkbox" id="vs-ai" checked />
+          Play against the computer (Black)
+        </label>
+        <h2>Moves</h2>
+        <ol id="moves" class="moves"></ol>
+      </aside>
+    </main>
+    <dialog id="promotion" class="promotion">
+      <p>Promote to</p>
+      <div id="promotion-choices"></div>
+    </dialog>
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>
